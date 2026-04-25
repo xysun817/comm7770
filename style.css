@@ -71,17 +71,17 @@ body {
 
 .text p {
     margin-bottom: 1.6em;
-    text-align: left; /* ✨【修復】改為左對齊，徹底解決巨大縫隙問題 ✨ */
-    text-wrap: pretty; /* 保持智慧防孤字功能 */
+    text-align: left; 
+    text-wrap: pretty; 
 }
 
 /* =========================================
-   爆點文字 / 引文區塊
+   爆點文字 / 引文區塊 (修復「突然斷開」感)
 ========================================= */
 .highlight {
     width: 100%; 
-    margin: 40px 0; 
-    padding: 40px 20px; 
+    margin: 20px 0 60px; /* ✨【優化】大幅縮小上方間距 (從40px縮至20px)，讓結論緊接論證 ✨ */
+    padding: 60px 20px;  /* ✨【優化】適度增加內部留白，確保紅區塊內部的大字有足夠尊榮感 ✨ */
     font-size: 1.8rem; 
     font-weight: 700;
     text-align: center;
@@ -134,7 +134,7 @@ body {
 }
 
 /* =========================================
-   圖表與視覺化
+   圖表與視覺化 (Visualization & Design)
 ========================================= */
 .chart {
     max-width: 920px; 
@@ -154,12 +154,12 @@ body {
 
 /* 圖註 */
 .caption {
-    max-width: 720px; 
+    max-width: 720px;    
     margin: 0 auto 80px; 
     font-size: 0.95rem; 
-    color: #777; 
+    color: #777;         
     line-height: 1.6;
-    text-align: left; /* 圖註同步改為左對齊 */
+    text-align: left;    
     padding: 0 20px;
 }
 
@@ -168,18 +168,18 @@ body {
     font-size: 1.15rem; 
     color: #000;      
     margin-bottom: 8px;
-    text-align: center; 
+    text-align: center;  
     font-weight: 700;
 }
 
 /* =========================================
-   互動式數據卡片
+   互動式數據卡片 (Interactive Elements)
 ========================================= */
 .cards {
     display: flex;
     gap: 30px;
     max-width: 900px;
-    margin: 60px auto;
+    margin: 50px auto;
     padding: 0 20px;
 }
 
@@ -198,6 +198,7 @@ body {
 .card:hover {
     transform: translateY(-8px); 
     box-shadow: 0 16px 30px rgba(0,0,0,0.08); 
+    border-color: #d63031; 
 }
 
 .card h3 {
@@ -256,12 +257,8 @@ body {
     box-shadow: 0 4px 20px rgba(0,0,0,0.04);
 }
 
-.ending p {
-    color: #333;
-}
-
 /* =========================================
-   排版工具 - 防止孤字
+   排版工具
 ========================================= */
 .keep-together {
     white-space: nowrap;
